@@ -246,28 +246,28 @@ int main()
 {
 	// Sound in background
 	sf::Music backgroundSound;
-	backgroundSound.openFromFile("src/Media/backgroundSound.ogg");
+	backgroundSound.openFromFile("Media/backgroundSound.ogg");
 	backgroundSound.setLoop(true);
 	backgroundSound.play();
 
 	// Player breathing
 	sf::Music breathing;
-	breathing.openFromFile("src/Media/breathing.ogg");
+	breathing.openFromFile("Media/breathing.ogg");
 	breathing.setLoop(true);
 	breathing.play();
 	breathing.setPitch(1.5f);
 
 	// Player creepy background
 	sf::Music creepyBack;
-	creepyBack.openFromFile("src/Media/laughSingingScream.ogg");
+	creepyBack.openFromFile("Media/laughSingingScream.ogg");
 	creepyBack.setLoop(true);
 	creepyBack.play();
 
 	// Steps sounds
 	std::unordered_map<std::string, sf::SoundBuffer> soundBuffers;
-	soundBuffers["step_1"].loadFromFile("src/Media/step_1.wav");
-	soundBuffers["step_2"].loadFromFile("src/Media/step_2.wav");
-	soundBuffers["step_3"].loadFromFile("src/Media/step_3.wav");
+	soundBuffers["step_1"].loadFromFile("Media/step_1.wav");
+	soundBuffers["step_2"].loadFromFile("Media/step_2.wav");
+	soundBuffers["step_3"].loadFromFile("Media/step_3.wav");
 	std::vector<sf::Sound> playingSounds;
 
 	auto playSound = [&playingSounds, &soundBuffers](const std::string& name, float pitch = 1.0f, float volume = 1.0f) {
@@ -313,7 +313,7 @@ int main()
 	// Teleport
 	sf::Texture teleportTexture;
 	teleportTexture.setSmooth(true);
-	teleportTexture.loadFromFile("src/Media/teleport.png");
+	teleportTexture.loadFromFile("Media/teleport.png");
 	sf::Sprite teleportSprite(teleportTexture);
 	teleportSprite.setOrigin(teleportTexture.getSize().x * 0.5f, teleportTexture.getSize().y * 0.5f);
 	teleportSprite.setPosition(teleportSprite.getOrigin());
@@ -326,21 +326,21 @@ int main()
 	// Wall textures
 	sf::Texture texture;
 	texture.setSmooth(true);
-	texture.loadFromFile("src/Media/walls.png");
+	texture.loadFromFile("Media/walls.png");
 
 	// Compass Textures
 	sf::Texture compassTexture;
 	compassTexture.setSmooth(true);
-	compassTexture.loadFromFile("src/Media/compass.png");
+	compassTexture.loadFromFile("Media/compass.png");
 	sf::Texture compassShadowTexture;
 	compassShadowTexture.setSmooth(true);
-	compassShadowTexture.loadFromFile("src/Media/compassShadow.png");
+	compassShadowTexture.loadFromFile("Media/compassShadow.png");
 	sf::Texture compassCircuitTexture;
 	compassCircuitTexture.setSmooth(true);
-	compassCircuitTexture.loadFromFile("src/Media/compassCircuit.png");
+	compassCircuitTexture.loadFromFile("Media/compassCircuit.png");
 	sf::Texture compassArrowTexture;
 	compassArrowTexture.setSmooth(true);
-	compassArrowTexture.loadFromFile("src/Media/compassArrow.png");
+	compassArrowTexture.loadFromFile("Media/compassArrow.png");
 
 	// Minimap render texture
 	const float minimapHeight = compassShadowTexture.getSize().y;
